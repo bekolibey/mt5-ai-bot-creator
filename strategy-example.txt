@@ -1,0 +1,10 @@
+Create an advanced MQL5 trading bot that uses a combination of Bollinger Bands (period 20, deviation 2) and the RSI indicator (period 14).
+
+Rules for Entry:
+1. Buy Condition: Wait for the price to close below the Lower Bollinger Band. At the same time or within 1 candle, the RSI must be oversold (below 30).
+2. Sell Condition: Wait for the price to close above the Upper Bollinger Band. At the same time, the RSI must be overbought (above 70).
+
+Risk Management:
+1. Do not use a fixed lot size. Calculate the lot size dynamically to risk exactly 2% of the total account balance per trade.
+2. Set a default Stop Loss of 600 points and a Take Profit of 1200 points.
+3. Once the trade is in profit by 300 points, activate a Trailing Stop that trails the price at a distance of 300 points to lock in profits.
